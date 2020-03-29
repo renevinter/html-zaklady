@@ -11,7 +11,7 @@ a {
     text-decoration: none;
 }
 
-.top {
+#top { /* id tag */
     height: 30px;
     width: 100%;
     background: darkolivegreen;
@@ -61,14 +61,22 @@ table tr td {
     font-size: 25px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: red;
+}
+
+.title {text-align: center; font-size: 50px;}
+.subtitle {color: darkolivegreen;}
+
 .thead {background-color: darkolivegreen; color: white;}
 .tfoot {background-color: grey; color: white;}
+.tdgrey {color: grey;}
 .tdfull {background-color: red; color: white;}
 
 form {
     max-width: 400px;
     margin: 0 auto;
-    text-align: left!important;
+    text-align: left;
 }
 
 footer {
@@ -76,3 +84,5 @@ footer {
     color: white;
     padding: 50px 0;
 }
+
+/* CSS Základy */

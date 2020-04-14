@@ -1,7 +1,5 @@
 <?php
 
-//Escape sekvence jsou hovadina, tohle je mnohem lepší
-
 echo '<img src="walter.jpg" title="walter" alt="walter"/>';
 echo "<br>\<br>";
 
@@ -67,4 +65,12 @@ var_dump($a>$b);
 
 print "<br>Je $b větší než $a?<br>";
 var_dump($a<$b);
+
+//Spojování řetězců
+
+echo "blb"."ost";          //vypíše "blbost"
+echo "hov" . "adina";      //vypíše slovo "hovadina"
+echo 1 . 2;                //vypíše číslo "12"
+echo 1.2;                  //vypíše číslo s decimální čárkou 1.2
+
 ?>

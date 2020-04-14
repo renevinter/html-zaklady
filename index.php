@@ -1,7 +1,6 @@
 <?php
 
-echo "<img src=\"walter.jpg\" />"; //Escape sekvence pro img tag
-//echo '<img src="walter.jpg" title="walter" alt="walter"/>';
+echo "<img src=\"walter.jpg\" title='walter pes' alt='walter'/>"; //Escape sekvence pro img tag
 echo "<br>\<br>";
 
 $a = 4;

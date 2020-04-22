@@ -4,16 +4,18 @@
 //  Úkol č.2
 //
 
+// bod 3. - Proměnné
+
 $reneVinter1 = 1;
 $reneVinter2 = 1;
 
-// bod 4.
+// bod 4. Jednoduchá podmínka
 if (true) {
     echo "René Vinter";
     echo "<br><br>";
 }
 
-// bod 5.
+// bod 5. Podmínka s else
 $jmeno = "René";
 $prijmeni = "Vinter";
 
@@ -70,52 +72,51 @@ print "Notebooky:";
 $notebooky = array(
     "1" => array(
         "2" => array(
-            "3" => array(
-                  'značka' => 'Lenovo',
-                  'procesor' => 'i5',
-                  'paměť' => '8GB RAM',
-                  'úložiště' => '500GB',
-                  'cena' => 9990),
-            array('značka' => 'Dell',
-                'procesor' => 'i3',
-                'paměť' => '4GB RAM',
-                'úložiště' => '240GB',
-                'cena' => 4990),
-            array('značka' => 'Apple',
-                'procesor' => 'i5',
-                'paměť' => '8GB RAM',
-                'úložiště' => '500GB',
-                'cena' => 27990),
-            array('značka' => 'Samsung',
-                'procesor' => 'i5',
-                'paměť' => '4GB RAM',
-                'úložiště' => '500GB',
-                'cena' => 8490),
-            array('značka' => 'Acer',
-                'procesor' => 'M',
-                'paměť' => 'bruh',
-                'úložiště' => 'asus',
-                'cena' => 7890),
-            array('značka' => 'HP',
-                'procesor' => 'Ryzen 5',
-                'paměť' => '8GB RAM',
-                'úložiště' => '1TB',
-                'cena' => 10999),
-            array('značka' => 'Toshiba',
-                'procesor' => 'i5',
-                'paměť' => '8GB RAM',
-                'úložiště' => '240GB',
-                'cena' => 7990),
-            array('značka' => 'MSI',
-                'procesor' => 'i9',
-                'paměť' => '32GB RAM',
-                'úložiště' => '2TB',
-                'cena' => 48990),
-            array('značka' => 'Sony',
-                'procesor' => 'Ryzen 5',
-                'paměť' => '16GB RAM',
-                'úložiště' => '1TB',
-                'cena' => 14990),
+            "3" => array('značka' => 'Lenovo',
+                         'procesor' => 'i5',
+                         'paměť' => '8GB RAM',
+                         'úložiště' => '500GB',
+                         'cena' => 9990),
+                   array('značka' => 'Dell',
+                    	 'procesor' => 'i3',
+                    	 'paměť' => '4GB RAM',
+                    	 'úložiště' => '240GB',
+                    	 'cena' => 4990),
+                   array('značka' => 'Apple',
+                    	 'procesor' => 'i5',
+                    	 'paměť' => '8GB RAM',
+                    	 'úložiště' => '500GB',
+                    	 'cena' => 27990),
+                   array('značka' => 'Samsung',
+						 'procesor' => 'i5',
+						 'paměť' => '4GB RAM',
+						 'úložiště' => '500GB',
+						 'cena' => 8490),
+                   array('značka' => 'Acer',
+						 'procesor' => 'M',
+						 'paměť' => 'bruh',
+						 'úložiště' => 'asus',
+						 'cena' => 7890),
+                   array('značka' => 'HP',
+						 'procesor' => 'Ryzen 5',
+						 'paměť' => '8GB RAM',
+						 'úložiště' => '1TB',
+						 'cena' => 10999),
+                   array('značka' => 'Toshiba',
+						 'procesor' => 'i5',
+						 'paměť' => '8GB RAM',
+						 'úložiště' => '240GB',
+						 'cena' => 7990),
+                   array('značka' => 'MSI',
+						 'procesor' => 'i9',
+						 'paměť' => '32GB RAM',
+						 'úložiště' => '2TB',
+						 'cena' => 48990),
+                   array('značka' => 'Sony',
+						 'procesor' => 'Ryzen 5',
+						 'paměť' => '16GB RAM',
+						 'úložiště' => '1TB',
+						 'cena' => 14990),
         )
     )
 );

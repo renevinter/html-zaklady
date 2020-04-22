@@ -127,8 +127,9 @@ var_dump($notebooky[1]);
 //  Úkol č.1
 //
 
-echo "<br><img src=\"walter.jpg\" title='walter pes' alt='walter'/>"; //Escape sekvence pro img tag
-echo "<br>\<br>";
+echo "<br><img src=\"walter.jpg\" title='walter pes' alt='walter'/><br>"; //Escape sekvence pro img tag
+echo '\\';
+echo "<br>";
 
 $a = 4;
 $b = 5;

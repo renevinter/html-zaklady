@@ -27,7 +27,6 @@ if ($reneVinter1 > $reneVinter2) {
 echo "<br><br>";
 
 //bod 6. Vnořená podmínka
-
 if ($reneVinter1 >= $reneVinter2) {
 	echo "$jmeno<br>";
 	if ($reneVinter1 == $reneVinter2) {

@@ -1,4 +1,12 @@
 <?php
+// Tracy
+require 'tracy/tracy.phar';
+use Tracy\Debugger;
+Debugger::enable();
+
+//Vlastnosti pro zvětšení pole
+Debugger::$maxDepth = 5;
+Debugger::$maxLength = 200;
 
 //
 //  Úkol č.2
@@ -73,7 +81,7 @@ $znacky = array(1 => "lenovo",
 				8 => "toshiba",
 				9 => "msi",
 				10 => "sony");
-var_dump($znacky);
+dump($znacky);
 
 //bod 9. - Vnořené pole
 print "Notebooky:";
@@ -101,9 +109,9 @@ $notebooky = array(
 						 'úložiště' => '500GB',
 						 'cena' => 8490),
 				   array('značka' => 'Acer',
-						 'procesor' => 'M',
-						 'paměť' => 'bruh',
-						 'úložiště' => 'asus',
+						 'procesor' => 'i3',
+						 'paměť' => '8GB',
+						 'úložiště' => '240GB',
 						 'cena' => 7890),
 				   array('značka' => 'HP',
 						 'procesor' => 'Ryzen 5',
@@ -129,7 +137,7 @@ $notebooky = array(
 	)
 );
 
-var_dump($notebooky[1]);
+dump($notebooky);
 
 //
 //  Úkol č.1
@@ -149,58 +157,58 @@ print "Druhé číslo = <b>$b</b> <br>";
 
 print "<br>Sčítání = ";
 echo $a + $b;
-var_dump($a + $b);
+dump($a + $b);
 
 print "<br>Odčítání = ";
 echo $a - $b;
-var_dump($a - $b);
+dump($a - $b);
 
 print "<br>Násobení = ";
 echo $a * $b;
-var_dump($a * $b);
+dump($a * $b);
 
 print "<br>Dělení = ";
 echo $a / $b;
-var_dump($a / $b);
+dump($a / $b);
 
 //Přirovnávací operátory
 
 print "<br> ";
 echo $a++;
-var_dump($a++);
+dump($a++);
 
 print "<br> ";
 echo $a--;
-var_dump($a--);
+dump($a--);
 
 print "<br> ";
 echo $a += $b;
-var_dump($a += $b);
+dump($a += $b);
 
 print "<br>";
 echo $a -= $b;
-var_dump($a -= $b);
+dump($a -= $b);
 
 print "<br>";
 echo $a *= $b;
-var_dump($a *= $b);
+dump($a *= $b);
 
 print "<br>";
 echo $a /= $b;
-var_dump($a /= $b);
+dump($a /= $b);
 
 print "<br> Rovnají se čísla?";
 echo $a == $b;
-var_dump($a == $b);
+dump($a == $b);
 
 print "<br>Má $a jinou hodnotu než $b?<br>";
-var_dump($a != $b);
+dump($a != $b);
 
 print "<br>Je $a větší než $b?<br>";
-var_dump($a > $b);
+dump($a > $b);
 
 print "<br>Je $b větší než $a?<br>";
-var_dump($a < $b);
+dump($a < $b);
 
 //Spojování řetězců
 

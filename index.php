@@ -4,6 +4,9 @@ require 'tracy/tracy.phar';
 use Tracy\Debugger;
 Debugger::enable();
 
+//Zobrazení chyb přes Tracy
+Debugger::$strictMode = true;
+
 //Vlastnosti pro zvětšení pole
 Debugger::$maxDepth = 5;
 Debugger::$maxLength = 200;

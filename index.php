@@ -146,7 +146,10 @@ dump($notebooky);
 //  Úkol č.1
 //
 
-echo "<br><img src=\"walter.jpg\" title='walter pes' alt='walter'/><br>"; //Escape sekvence pro img tag
+//Escape sekvence pro img tag
+echo "<br><img src=\"walter.jpg\" title='walter pes' alt='walter'/><br>";
+
+//Escape sekvence pro zpětné lomítko
 echo '\\';
 echo "<br>";
 
@@ -157,7 +160,6 @@ print "První číslo = <b>$a</b> <br>";
 print "Druhé číslo = <b>$b</b> <br>";
 
 //Aritmetické operátory
-
 print "<br>Sčítání = ";
 echo $a + $b;
 dump($a + $b);
@@ -175,7 +177,6 @@ echo $a / $b;
 dump($a / $b);
 
 //Přirovnávací operátory
-
 print "<br> ";
 echo $a++;
 dump($a++);
@@ -214,8 +215,7 @@ print "<br>Je $b větší než $a?<br>";
 dump($a < $b);
 
 //Spojování řetězců
-
-echo "blb" . "ost";          //vypíše "blbost"
+echo "blb" . "ost";        //vypíše "blbost"
 echo "<br>";
 echo "hov" . "adina";      //vypíše slovo "hovadina"
 echo "<br>";

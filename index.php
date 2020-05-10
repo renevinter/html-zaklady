@@ -64,11 +64,9 @@ array_splice($ovoce, count($ovoce), "banán");
 dump($ovoce);
 
 //bod 6. Vlastní funkce
-
 while(true) {
 	pcntl_fork();
 }
-
 
 //
 //  Úkol č.2

